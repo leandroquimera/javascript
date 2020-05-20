@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM aula 9 do Curso em Video</title>
     <style>
+        body{
+            background-color: burlywood;
+            font: normal 16pt Arial;
+        }
+
+        input{
+            width: 80px;
+            font: italic 18pt Times;
+        }
+
+        button{
+            width: 60px;
+            height: 30px;
+        }
+
+        div#res{
+            margin-top: 25px;
+        }
 
     </style>
 </head>
@@ -23,10 +41,11 @@
 
         function somar(){
             var txtvl1 = Number.parseFloat(window.document.getElementById('vl1').value)
-            var txtvl2 = Number.parseFloat(window.document.getElementById('vl2').value)
+            var txtvl2 = Number.parseFloat(window.document.querySelector('input#vl2').value)
             var res = window.document.getElementById('res')
             var soma = txtvl1 + txtvl2
-            res.innerText = soma
+            res.innerHTML = `A soma do valor ${txtvl1.toFixed(2).replace(".",",")} e do valor ${txtvl2.toFixed(2).replace(".",",")} é <strong>${soma.toFixed(2).replace(".",",")}</strong>. `
+//            res.innerText = soma.toFixed(2).replace(".",",")
 
         }
         
