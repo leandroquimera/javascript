@@ -12,26 +12,25 @@
 
     <h1>Somando valores</h1>
 
-    Digite um valor: <input type="number" name="vl1" id="vl1">
-    <br>
-    Digite outro valor: <input type="number" name="vl2" id="vl2">
-    <br>
-    <button type="submit" value="somar" onclick="clicar()">Somar</button>
+    <input type="number" name="vl1" id="vl1"> +
+    <input type="number" name="vl2" id="vl2">
+    <button type="submit" value="Somar" onclick="somar()" >Soma...</button>
     <div id="res">
-
+        <p>Resultado..</p>
     </div>
 
     <script>
 
-        function clicar(){
-            window.document.write = "A soma do primeiro numero com o segundo é... "
-            var n1 = window.document.getElementById('vl1')
-            var n2 = window.document.getElementById('vl2')
-            var s1 = Number(n1.value)
-            var s2 = Number(n2.value)
-            var soma = s1 + s2
+        function somar(){
+            var txtvl1 = Number.parseFloat(window.document.getElementById('vl1').value)
+            var txtvl2 = Number.parseFloat(window.document.getElementById('vl2').value)
             var res = window.document.getElementById('res')
-            res.innerHTML = soma
+            var soma = txtvl1 + txtvl2
+            res.innerText = soma
+
+        }
+        
+
     </script>
 </body>
 </html>
