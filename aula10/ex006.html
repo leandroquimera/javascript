@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 de JavaScript Curso em Video</title>
+
+    <style>
+        body {
+            background: cadetblue;
+            color: chartreuse;
+            font: normal 16pt Arial;
+        }
+
+        div#area {
+            font: normal 20pt Times;
+            background: greenyellow;
+            color: black;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h3>Eventos <strong>DOM</strong></h3>
+    <div id="area" onmouseout="sair()"> <!-- posso colocar a chamada da função aqui ou no SCRIPT la em baixo com o evento addEventListener -->
+
+        Interaja...
+
+    </div>
+
+
+    <script>
+        var area1 = window.document.getElementById('area')
+        area1.addEventListener('click', clicar) // Não foi colocado no HTML, e esperando que a variavel AREA1 sofra o evento para executar a função
+        area1.addEventListener('mouseenter', entra) // não pode colocar o ON que é obrigatorio no HTML la de cima
+
+        function clicar(){
+            window.document.getElementById('area').innerText = 'CLICOU !!!'
+        }
+
+        function sair(){
+            area1.innerHTML = "SAIU!!!"
+        }
+
+        function entra(){
+            area1.innerText = "ENTROU!!!"
+            document.getElementById('area').style.background = "red"
+            area1.style.border = "8px solid blue"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM aula 9 do Curso em Video</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>Somando valores</h1>
+
+    Digite um valor: <input type="number" name="vl1" id="vl1">
+    <br>
+    Digite outro valor: <input type="number" name="vl2" id="vl2">
+    <br>
+    <button type="submit" value="somar" onclick="clicar()">Somar</button>
+    <div id="res">
+
+    </div>
+
+    <script>
+
+        function clicar(){
+            window.document.write = "A soma do primeiro numero com o segundo é... "
+            var n1 = window.document.getElementById('vl1')
+            var n2 = window.document.getElementById('vl2')
+            var s1 = Number(n1.value)
+            var s2 = Number(n2.value)
+            var soma = s1 + s2
+            var res = window.document.getElementById('res')
+            res.innerHTML = soma
+    </script>
+</body>
+</html>
