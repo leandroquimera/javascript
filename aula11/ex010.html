@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DETRAN</title>
 </head>
 <body>
-    
+    <h1>Sistema de Multas</h1>
+    <p>Velocidade do carro: <input type="number" name="velo" id="txtvelo"> km/h</p>
+    <input type="button" value="verificar" onclick="multar()" >
+    <div id="multado" onmousemove="pergunta()">
+ 
+    </div>
+
+    <script>
+/*         function pergunta(){
+            var pega = window.document.querySelector('h3')
+            pega.innerText = "Sera??"
+        }
+ */
+        function multar(){
+            var txtvl = window.document.querySelector('input#txtvelo')
+            var resposta = window.document.querySelector('div#multado')
+            var numvelo = Number(txtvl.value)
+            resposta.innerHTML = ``
+            if (numvelo > 60) {
+                resposta.innerHTML += `<p>Você estava a ${numvelo}Km/h e foi multado</p>`
+            }
+            resposta.innerHTML += `<p>Dirija sempre com cinto de seguranda</p>`
+        }
+
+    </script>
 </body>
 </html>
