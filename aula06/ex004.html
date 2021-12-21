@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font: normal 20pt Arial;
+            font: normal 10pt Arial;
         }
     </style>
     <title>Document</title>
@@ -20,14 +20,52 @@
     <script>
         var nome = window.prompt('Qual é seu nome')
         document.write(`Olá <strong>${nome}</strong>, seu nome tem ${nome.length} letras<br>`)
-        document.write(`Seu nome em letras MAIUSCULAS fica, ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em letras MAIUSCULAS fica, <strong>${nome.toUpperCase()}</strong><br>`)
         document.write(`Seu nome em letras MINUSCULAS fica, ${nome.toLowerCase()}<br>`)
         var n1 = 1545.5
+        var n2 = '2000,00'
         document.write(`A variavel <strong>n1</strong> tem o valor de ${n1.toFixed(2)}, com <strong>duas</strong> casas decimais<br>`)
         document.write(`A variavel <strong>n1</strong> tem com o valor ${n1.toFixed(2).replace('.',',')}, com <strong>virgula</strong> no decimal<br>`)
         document.write(`A variavel <strong>n1</strong> tem com o valor ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}, com <strong>configuração REAL</strong> na frente<br>`)
         document.write(`A variavel <strong>n1</strong> tem com o valor ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}, com <strong>configuração DOLAR</strong> na frente<br>`)
         document.write(`A variavel <strong>n1</strong> tem com o valor ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}, com <strong>configuração EURO</strong> na frente<br>`)
+    </script>
+    <br>
+    <script>
+        document.write(`<strong>ORDEM DE PRECEDENCIA</strong><br>`)
+        var a = 5 + 3
+        var b = a % 5
+        var c = 5 * b ** 2
+        var d = 10 - a / 2
+        var e = 6 * 2 / d
+        var f = b % e + 4 / e
+        document.write(`A variavel "A" tem o valor de ${a}<br>`)
+        document.write(`A variavel "B" tem o valor de ${b}<br>`)
+        document.write(`A variavel "C" tem o valor de ${c}<br>`)
+        document.write(`A variavel "D" tem o valor de ${d}<br>`)
+        document.write(`A variavel "E" tem o valor de ${e}<br>`)
+        document.write(`A variavel "F" tem o valor de ${f}<br>`)
+ 
+    </script>
+    <br>
+    <script>
+        document.write(`<strong>AUTO-ATRIBUIÇÕES</strong><br>`)
+        var n = 3
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = 3</strong><br>`)
+        var n = n + 4  // n += 4
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n + 4</strong><br>`)
+        var n = n - 5  // n -= 5
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n - 5</strong><br>`)
+        var n = n * 4  // n *= 5
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n * 4</strong><br>`)
+        var n = n / 2  // n /= 2
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n / 2</strong><br>`)
+        var n = n ** 2  // n **= 2
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n ** 2</strong><br>`)
+        var n = n % 5  // n %= 5
+        document.write(`A variavel "N" tem o valor de ${n} na expressao <strong>var n = n % 5</strong><br>`)
+        
+ 
     </script>
 </body>
 </html>
